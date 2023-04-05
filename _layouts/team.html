@@ -1,0 +1,40 @@
+<?php
+/**
+ * Team page template.
+ *
+ * @package Console Theme
+ */
+
+get_header();
+
+$team = get_team();
+?>
+
+<?php if ( count( $team ) > 0 ) : ?>
+	<?php $post_count = 0; ?>
+	<div id="posts">
+		<ol id="post-list">
+			<?php foreach ( $team as $member ) : ?>
+				<?php $post_count++; ?>
+				<li>
+					<article <?php post_class(); ?>>
+						<div class="post_content">
+							<a href="<?php echo esc_url( $member->url ); ?>">
+								<?php echo esc_html( "$member->full_name" ); ?>
+							</a> &mdash; <?php echo esc_html( $member->role ); ?>
+						</div>
+					</article>
+				</li>
+			<?php endforeach; ?>
+		</ol>
+
+		<nav id="post-nav">
+			<span class="nav-newer"><?php previous_posts_link( '<span class="char">&#8592;</span> newer posts' ); ?></span>
+			<span class="nav-older"><?php next_posts_link( 'older posts <span class="char">&#8594;</span>' ); ?></span>
+		</nav>
+	</div><!-- #posts -->
+
+<?php
+endif;
+
+get_footer();

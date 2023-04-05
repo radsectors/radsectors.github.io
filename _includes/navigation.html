@@ -1,0 +1,11 @@
+<nav id="footer" class="menu-navmenu-container" role="navigation">
+    <ul id="menu-navmenu" class="menu">
+        {% for p in site.data.navigation %}
+        <li id="menu-item-{{ p.id }}"
+            class="menu-item menu-item-object-page menu-item-home page_item{% if p.permalink == page.permalink %} current-menu-item current_page_item{% endif %}">
+            <a href="{{ p.permalink }}" {% if p.permalink == page.permalink %}aria-current="page"
+                {% endif %} title="{{ p.key }}"><span class="inverted">^{{ p.key }}</span> {{ p.title }}</a>&nbsp;
+        </li>
+        {% endfor %}
+    </ul>
+</nav><!-- #footer -->

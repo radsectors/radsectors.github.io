@@ -1,0 +1,35 @@
+
+                    </section><!-- #content -->
+                </div><!-- #container -->
+
+                <div id="scrollbar">
+                    <span class="char" id="scrollbar-up">&#8593;</span>
+                    <div id="scrollbar-handle-track">
+                        <div id="scrollbar-handle" class="inverted"></div>
+                    </div>
+                    <span class="char" id="scrollbar-down">&#8595;</span>
+                </div>
+
+                <footer>
+                    {% include navigation.html %}
+                    <span id="pubdate">pub⑆ {{ site.time | date: '%Y-%m-%d %H%M.%S' }}</span>
+                </footer>
+            </div><!-- #grid -->
+        </div><!-- #screen -->
+    </div><!-- #vertalign -->
+</div><!-- #page -->
+
+<div id="debug" style="display:none">
+    <dl>
+        <dt>keydown:</dt>
+            <dd class="keydown"></dd>
+        <dt>other:</dt>
+            <dd class="other"></dd>
+    </dl>
+</div>
+
+{% include modal.html %}
+
+<script type="text/javascript" src="/js/bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+/* ------------------------    CSS3 ENHANCEMENTS  ---------------------------------- */
+
+/* SCROLLBAR */
+
+#grid section#container {
+	width: 948px;
+	z-index: 0;
+}
+
+#scrollbar,
+#scrollbar-up,
+#scrollbar-down,
+#scrollbar-handle-track,
+#scrollbar-handle {
+	width: 12px;
+	overflow: visible;
+}
+#scrollbar-up,
+#scrollbar-down,
+#scrollbar-handle {
+	height: 24px;
+	cursor: pointer;
+}
+#scrollbar-handle {
+	cursor: hand;
+}
+#grid #scrollbar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+
+	height: 100%;
+}
+#grid #scrollbar #scrollbar-up {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#grid #scrollbar #scrollbar-down {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+#grid #scrollbar #scrollbar-handle-track {
+	position: absolute;
+	top: 24px;
+	left: 0;
+	bottom: 24px;
+}
+#grid #scrollbar #scrollbar-handle {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	height: 48px;
+}
+
+
+.inverted {
+	background: rgb(255,255,255);
+	-moz-box-shadow: 0 0 3px rgb(0,255,191);
+	-webkit-box-shadow: 0 0 3px rgb(0,255,191);
+	box-shadow: 0 0 3px rgb(0,255,191);
+}
+.inverted,
+.inverted a {
+	text-shadow: 0 0 1px rgb(0,255,191);
+}

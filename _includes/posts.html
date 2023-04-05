@@ -1,0 +1,56 @@
+
+<!-- $post_count = 0; -->
+<div id="posts">
+    <ol id="post-list">
+        <!-- while ( have_posts() ) : -->
+            <!-- the_post(); -->
+            <!-- $post_count++; -->
+            <!-- if ( is_page() || is_singular() ) : -->
+
+            <!-- else : -->
+                <li>
+                    <article id="post-<!-- the_ID(); -->" <!-- post_class(); -->>
+                        <!-- if ( 1 === $post_count ) : -->
+                            <div class="hr">================================= begin post ==================================</div>
+                        <!-- endif; -->
+                        <header>
+                            <!-- console_post_date( '⑆', '⑆' ); -->
+                            <!-- console_post_title( '', '⑈' ); -->
+                            <!-- console_post_author( '', '⑇' ); -->
+                            <!-- edit_post_link( 'edit&hellip;' ); -->
+                            <!-- if ( has_post_thumbnail() ) : -->
+                                <div class="featured-image">
+                                    <!-- the_post_thumbnail(); -->
+                                </div>
+                            <!-- endif; -->
+                        </header>
+                        <div class="post_content">
+                            <!-- the_content(); -->
+                            <!--
+                                wp_link_pages( [
+                                    'before' => '<div class="page-link">pages:',
+                                    'after'  => '</div>',
+                                ]);
+                            -->
+                        </div>
+                        <footer class="post_other">
+                            <div class="tags">
+                                <!-- the_tags( 'tags: &lt;', '&gt; &lt;', '&gt;' ); -->
+                            </div>
+                        </footer>
+                        <!-- if ( more_posts() ) : -->
+                            <div class="hr">================================== new post ===================================</div>
+                        <!-- else : -->
+                            <div class="hr">================================== end post ===================================</div>
+                        <!-- endif; -->
+                    </article>
+                </li>
+            <!-- endif; -->
+        <!-- endwhile; // End the loop. Whew. -->
+    </ol><!-- #post-list -->
+
+    <nav id="post-nav">
+        <span class="nav-newer"><!-- previous_posts_link( '<span class="char">&#8592;</span> newer posts' ); --></span>
+        <span class="nav-older"><!-- next_posts_link( 'older posts <span class="char">&#8594;</span>' ); --></span>
+    </nav>
+</div><!-- #posts -->

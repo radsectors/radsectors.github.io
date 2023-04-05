@@ -1,0 +1,8 @@
+- id: 0
+  title: home
+  permalink: /
+  key: H
+- id: 2
+  title: projects
+  permalink: /portfolio
+  key: P

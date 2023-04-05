@@ -1,0 +1,27 @@
+
+# turn off directory browsing
+IndexIgnore *
+
+# show custom error pages for these HTTP statuses
+ErrorDocument 404 /404.html
+ErrorDocument 403 /404.html
+ErrorDocument 401 /404.html
+
+# start rewrite rules
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# pass through requests when the page exists
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^(.*)$ - [L]
+
+# Remove the .html extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([a-zA-Z0-9\-]+)\/?$ $1.html [NC,L]
+
+# pass anything ending in HTML - prevents infinite redirect if the wildcard formulas below are incorrect
+RewriteRule ^(.*).html$ - [L]
+
+# end rewrite rules
+</IfModule>

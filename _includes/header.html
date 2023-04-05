@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" class="no-js" style="margin-top:0;">
+{% include head.html %}
+
+<body class="home page-template-default page">
+
+<div id="page">
+    <div id="vertalign">
+        <div id="screen" class="screen">
+            <div id="aligngrid"></div>
+            <div id="thematrix"></div>
+            <div id="grid" class="grid">
+                <header class="inverted">
+                    <div id="blog_title">
+                        <a href="{{ site.url }}">{{ site.title }}</a>
+                    </div>
+                    <div id="page_title">
+                        &mdash; {{ site.description }}
+                    </div>
+                    <div id="copyright">
+                        &copy;{{ site.time | date: '%Y' }} {{ site.title }}
+                    </div>
+                </header>
+                <div id="container">
+                    <section id="content">

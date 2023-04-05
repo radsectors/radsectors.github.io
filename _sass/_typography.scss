@@ -1,0 +1,125 @@
+/* ------------------------    TYPOGRAPHY  ---------------------------------- */
+
+@import url(https://fonts.googleapis.com/css?family=Cousine:400,400italic,700,700italic&subset=latin&v2);
+
+/* BASIC */
+
+/* for two levels of nested quotations */
+q {quotes: '“' '”' '‘' '’';}
+ /* extra content definitions for pre-2011 WebKit */
+q:before {content: '“'; content: open-quote;}
+q:after {content: '”'; content: close-quote;}
+q q:before {content: '‘'; content: open-quote;}
+q q:after {content: '’'; content: close-quote;}
+  /* q in blockquote */
+blockquote q:before {content: '‘'; content: open-quote;}
+blockquote q:after {content: '’'; content: close-quote;}
+blockquote q q:before {content: '“'; content: open-quote;}
+blockquote q q:after {content: '”'; content: close-quote;}
+  /* blockquote hanging opening quote
+blockquote:before {display: block; height: 0; content: "“"; margin-left: -.95em; font: italic 400%/1 Cochin,Georgia,"Times New Roman",serif; color: #999;}*/
+/* quotes for French, German (two kinds) and Japanese */
+:lang(fr) > q {quotes: '«' '»' '“' '”';}
+:lang(de) > q {quotes: '„' '“' '‚' '‘';}
+:lang(de) > q {quotes: '»' '«' '›' '‹';} /* alternative style */
+:lang(ja) > q {quotes: '「' '」' '『' '』';}
+
+
+#screen {
+	* {
+		font-family:'Cousine', 'Courier New', 'Courier', 'Segoe UI Symbol', 'Arial Unicode MS', fixed, sans-serif !important;
+		font-size: 20px !important;
+		line-height: 24px !important;
+
+		color: rgb(204,204,204);
+
+		text-shadow: 0 0 3px rgb(0,255,192);
+
+		.inverted,
+		.inverted *,
+		&::selection {
+			background: rgb(255,255,255);
+			color: rgb(10,21,20) !important;
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+	a:link,
+	a:visited {
+		color: rgb(128,128,224);
+		text-shadow: 0 0 3px rgb(0,128,224);
+	}
+	a:hover,
+	a:active,
+	a:hover {
+		color: rgb(224,128,224);
+		text-shadow: 0 0 3px rgb(255,192,176);
+	}
+
+
+	.char {
+		display: inline-block;
+		width: 12px !important;
+		height: 24px !important;
+		text-align: center;
+	}
+	.jp {
+		display: inline-block;
+		width: 24px !important;
+		height: 24px !important;
+		text-align: center;
+	}
+	.ko {
+		display: inline-block;
+		width: 24px !important;
+		height: 24px !important;
+		text-align: center;
+	}
+}
+
+img {
+	width: auto;
+	vertical-align: bottom;
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
+small {
+	font-size: 100%;
+}
+
+#grid code {
+	margin: 0;
+	display: block;
+	padding: 24px;
+	white-space: pre-wrap;
+}
+#grid code.pre {
+	padding: 0 0 24px;
+}
+
+#grid .indent {
+	display: block;
+	margin: 0 0 0 36px;
+}
+
+p {
+	display: block;
+	min-height: 24px !important;
+	line-height: 24px !important;
+	margin-bottom: 24px;
+}
+b {
+	color: rgb(255,255,255);
+	text-decoration: none;
+}
+i {
+	font-style: italic;
+}
+strong {
+	color: rgb(255,255,255);
+	text-decoration: none;
+}

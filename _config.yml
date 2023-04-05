@@ -1,0 +1,17 @@
+title: radsectors
+email: info@radsectors.com
+description: 0 KB in rad sectors.
+url: "https://radsectors.com"
+author: Owen Hester
+lang: en_US
+
+#links
+github: https://github.com/radsectors
+packagist: https://packagist.org/users/radsectors
+npm: https://npmjs.com/org/radsectors
+
+# Build settings
+markdown: kramdown
+
+plugins:
+  - jekyll-seo-tag

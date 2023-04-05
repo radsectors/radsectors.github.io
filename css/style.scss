@@ -1,0 +1,182 @@
+---
+
+---
+
+@import "reset";
+@import 'tags';
+@import 'typography';
+@import 'enhancement';
+@import 'posts';
+@import 'comments';
+@import 'images';
+
+
+* html, body {
+  margin-top: 0 !important;
+  overflow: hidden;
+  background:	url($background) no-repeat center center #000;
+}
+
+
+body {
+  #page {
+    margin: 0 auto;
+    width: 1000px;
+    height: 100%;
+
+    #vertalign {
+      position: absolute;
+      top: 50%;
+
+      height: 0px;
+
+      >#screen {
+        position: relative;
+        background: transparent url($scanlines) repeat center center;
+
+        top:-320px;
+
+        width: 1000px;
+        height: 640px;
+
+        border-radius: 40px;
+
+        >* {
+          position: absolute;
+          top: 20px;
+          bottom: 20px;
+          left: 20px;
+
+          width: 960px;
+          height: 600px;
+
+          overflow: visible;
+        }
+        >#aligngrid {
+          z-index: 9999;
+          background: none;
+          display: none;
+        }
+        >#grid {
+          >header,
+          >footer {
+            position: absolute;
+            right: 12px;
+            left: 0;
+
+            height: 24px;
+            overflow: visible;
+          }
+          >header {
+            top: 0;
+            * {
+              height: 24px;
+            }
+            #blog_title {
+              float: left;
+              padding-right: 12px;
+            }
+            #page_title {
+              float: left;
+              overflow: hidden;
+            }
+            #copyright {
+              position: absolute;
+              right: 12px;
+            }
+          }
+          #container {
+            position: absolute;
+            top: 24px;
+            left:-12px;
+            padding: 0 12px;
+
+            height: 552px;
+            width: 948px;
+
+            overflow: hidden;
+          }
+          >footer {
+            bottom: 0;
+
+            >nav {
+              ul {
+                display: inline;
+
+                li {
+                  float: left;
+                  width: 156px;
+                }
+              }
+            }
+
+            #pubdate {
+              float: right;
+            }
+          }
+        }
+        #thematrix {
+          top: 15px;
+          bottom: 15px;
+          left: 15px;
+
+          width: 960px;
+          height: 600px;
+          padding: 5px;
+
+          z-index: 9998;
+          display: none;
+
+          background: transparent;
+        }
+      }
+    }
+
+  }
+
+  #overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    .center {
+      margin: 0 auto;
+      width: 1000px;
+      height: 100%;
+
+      .middle {
+        position: absolute;
+        top: 50%;
+        height: 0px;
+
+        .screen {
+          border-radius: 40px 40px 40px 40px;
+          height: 640px;
+          position: relative;
+          top: -320px;
+          width: 1000px;
+        }
+      }
+    }
+    // .grid {
+    //   background: url('../images/aligngrid.png') repeat scroll 0 0 transparent;
+    // }
+  }
+
+  #debug {
+    background:#fff;
+    width: 200px;
+    height: auto;
+    min-height: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}

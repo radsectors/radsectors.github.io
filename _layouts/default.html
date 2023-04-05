@@ -1,0 +1,39 @@
+{% include header.html %}
+
+<div id="posts">
+    <ol id="post-list">
+        <li>
+            <article id="page-{{ page.name }}" class="page type-page">
+                <header>
+                    {% if page.image %}
+                    <div class="featured-image">
+                        <img src="{{ page.image }}" class="attachment-post-thumbnail size-post-thumbnail wp-post-image"
+                            alt="" />
+                    </div><!-- .featured-image -->
+                    {% endif %}
+                </header>
+                <div class="post_content">
+                    <h1>{{ page.headline }}</h1><br>
+
+                    {{ content }}
+
+                    {% if page.pages %}
+                    <div class="page-link">
+                        pages:
+                        <!-- wp_link_pages()-->
+                    </div>
+                    {% endif %}
+                </div>
+                <footer class="post_other">
+                    {% if page.tags %}
+                    <div class="tags">
+                        <!-- the_tags( 'tags: &lt;', '&gt; &lt;', '&gt;' ); -->
+                    </div>
+                    {% endif %}
+                </footer>
+            </article>
+        </li>
+    </ol><!-- #post-list -->
+</div><!-- #posts -->
+
+{% include footer.html %}

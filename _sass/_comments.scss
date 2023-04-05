@@ -1,0 +1,87 @@
+#comments {
+	padding: 10px 0;
+}
+#comments .comments-outer,
+#comments .comments-inner {
+	border-width: 1px 2px;
+	border-style: solid;
+	border-color:#fff;
+}
+#comments .comments-outer {
+	margin: 0 3px;
+	padding: 2px 1px; /* good */
+	
+	-moz-box-shadow: 0 0 2px #00ffbf;
+	-webkit-box-shadow: 0 0 2px #00ffbf;
+	box-shadow: 0 0 2px #00ffbf;
+}
+#comments .comments-inner {
+	margin: 0;
+	padding: 10px 4px;
+	
+	-moz-box-shadow: inset 0 0 3px #00ffbf;
+	-webkit-box-shadow: inset 0 0 3px #00ffbf;
+	box-shadow: inset 0 0 3px #00ffbf;
+}
+
+#comments #comments-title {
+	margin: 0 0 24px;
+}
+#comments ol.commentlist {
+	margin: 0 0 24px;
+}
+
+#comments .children {
+	margin: 0 0 0 24px;
+}
+
+#comments .comment {
+	margin: 24px 0 0 0;
+}
+
+#comments .vcard img {
+	float: left;
+	margin: 0 12px 0 0 !important;
+}
+#comments .comment-text,
+#comments .reply {
+	margin: 0 0 0 60px;
+}
+
+#comments .comment>#respond {
+	padding: 0 0 0 60px;
+}
+
+#comments #reply-title,
+#comments #commentform {
+	display: inline;
+}
+#comments #commentform .comment-form-field {
+	margin: 0;
+	//width: 360px;
+}
+#comments #commentform>.comment-form-field>input[type="text"] {
+	float: right;
+}
+#comments #commentform input {
+	margin: 0 0 0 12px;
+}
+#comments #commentform button,
+#comments #commentform input[type="button"],
+#comments #commentform input[type="submit"] {
+	margin: 0 0 0 10px;
+}
+
+/* comment textarea */
+#comments #comment_textarea {
+	padding: 0;
+	margin: 12px 6px;
+	
+}
+#comments #comment {
+	width: 100% !important;
+}
+
+#comments .form-submit {
+	height: 24px;
+}
